@@ -1,0 +1,36 @@
+zero short
+few short
+chain of thoughts
+
+
+pre tuning
+fine tuning
+
+process:
+1.Data collection
+2.Data cleaning
+3.Model building
+4.Data evaluation
+5.Data organization
+
+Types of algorithms:
+1.Supervised learning
+2.Unsupervised learning
+3.Reinforcement learning
+4.Semi-supervised learning
+
+supervised learning:
+types
+linear 
+logistic
+support vector
+k nearest
+decision tree
+random forest technique
+
+
+
+import numpy as np
+import pandas as pd
+impot matplotlib.pyplot as plt
+import seaborn as sns
