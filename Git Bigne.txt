@@ -1,0 +1,13 @@
+new -> data Science(folder)
+IN Git bash
+    |
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+cd Desktop
+git clone (repo link)
+cd (File name)
+git add .
+git status
+git commit -m "change of file added"
+git push
