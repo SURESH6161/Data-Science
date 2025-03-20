@@ -6,7 +6,7 @@ git config --global user.name "Your Name"
 
 cd Desktop
 git clone (repo link)
-cd (File name)
+cd (File name)  
 git add .
 git status
 git commit -m "change of file added"
