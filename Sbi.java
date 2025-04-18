@@ -1,4 +1,4 @@
-import java.io.*;
+
 import java.util.*;
 
 public class Sbi {
@@ -8,21 +8,22 @@ public class Sbi {
         int MinimumBalance = 1000;
         int pin = 30094;
         int Pin;
-        Scanner  intput = new Scanner(System.in);
-        
+        Scanner intput = new Scanner(System.in);
+
         System.out.println("Money Always Ultimate");
         System.out.print("Enter your account number: ");
-        long EnteredAccountNum =  intput.nextLong();       
+        long EnteredAccountNum = intput.nextLong();
         if (EnteredAccountNum == AccountNum) {
             System.out.println(":) " + AccountNum);
         } else {
             System.out.println("Enter a valid account number :( ");
+            intput.close();
             return;
         }
 
         for (int i = 0; i < 3; i++) {
             System.out.print("Enter your pin number: ");
-            Pin =  intput.nextInt();
+            Pin = intput.nextInt();
 
             if (Pin != pin) {
                 System.out.print("Enter the correct pin. You have " + (3 - i) + " attempts left.\n");
@@ -33,18 +34,18 @@ public class Sbi {
                     System.out.println("3: MINI STATEMENT");
                     System.out.println("4: CHECK BALANCE");
                     System.out.print("Enter your Option: ");
-                    int Option =  intput.nextInt();
+                    int Option = intput.nextInt();
 
                     switch (Option) {
                         case 1:
                             System.out.print("Enter the Deposit Amount: ");
-                            int deposit =  intput.nextInt();
+                            int deposit = intput.nextInt();
                             AccountBalance += deposit;
                             System.out.println("The account balance after deposit is " + AccountBalance);
                             break;
                         case 2:
                             System.out.print("Enter the Withdraw Amount: ");
-                            int withdraw =  intput.nextInt();
+                            int withdraw = intput.nextInt();
                             if (AccountBalance - withdraw >= MinimumBalance) {
                                 AccountBalance -= withdraw;
                                 System.out.println("Your withdrawal is successful.");
@@ -69,7 +70,7 @@ public class Sbi {
                     }
 
                     System.out.print("Enter 1 to continue or 0 to exit: ");
-                    int next =  intput.nextInt();
+                    int next = intput.nextInt();
                     if (next == 0) {
                         break;
                     } else if (next != 1) {
@@ -80,5 +81,7 @@ public class Sbi {
                 break;
             }
         }
+
+        intput.close();
     }
 }
