@@ -11,7 +11,7 @@ Supervised learning uses labeled data to train models for predictions. It is div
 
 ### 1. Classification
 
-- **Decision Trees** – [Decision Tree Repo](https://github.com/pb111/Decision-Tree-Classification)  
+- **Decision Trees** – [Decision Tree Repo](Supervised/Decision_Tree.ipynb)  
 - **Random Forest** – [Random Forest Repo](Supervised/Random_Forest_Algoritham.ipynb)  
 - **SVM (Support Vector Machines)** – [SVM Repo](https://github.com/pb111/Support-Vector-Machines-Project)  
 - **KNN (K-Nearest Neighbors)** – [KNN Repo](https://github.com/ghimiresunil/Scratch-implementation-of-KNN)  
