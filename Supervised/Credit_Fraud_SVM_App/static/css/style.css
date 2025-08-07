@@ -1,0 +1,130 @@
+/* static/css/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    width: 90%;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #c81e1e;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+.form-grid {
+    display: grid;
+    /* Create 3 columns for the form inputs */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #495057;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #a01a1a;
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.15);
+}
+
+button {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    background: linear-gradient(90deg, #dc3545, #b02a37);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.3);
+}
+
+.result {
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.result.positive {
+    background-color: #f8d7da;
+    border-left: 6px solid #dc3545;
+    color: #721c24;
+}
+
+.result.negative {
+    background-color: #d4edda;
+    border-left: 6px solid #28a745;
+    color: #155724;
+}
+
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    button {
+        width: 100%;
+    }
+}

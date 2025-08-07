@@ -1,0 +1,11 @@
+customer_id,age,gender,income,loan_amount,loan_term_months,credit_score,employment_status,num_previous_loans,previous_defaults,loan_purpose,has_dependents,defaulted
+10001,29,Male,52000,15000,36,690,Employed,1,0,car,No,0
+10002,45,Female,90000,25000,60,720,Self-Employed,3,1,home,Yes,1
+10003,33,Male,42000,12000,48,580,Unemployed,0,0,personal,No,1
+10004,61,Female,105000,35000,60,800,Retired,4,0,education,Yes,0
+10005,38,Male,61000,20000,36,650,Employed,2,1,car,Yes,1
+10006,52,Female,88000,24000,48,700,Self-Employed,2,0,personal,Yes,0
+10007,47,Male,67000,18000,60,670,Employed,1,0,home,No,0
+10008,24,Female,35000,10000,24,610,Unemployed,0,0,car,No,1
+10009,31,Other,49000,13000,36,640,Employed,1,1,education,No,1
+10010,56,Male,76000,22000,60,730,Retired,3,0,personal,Yes,0

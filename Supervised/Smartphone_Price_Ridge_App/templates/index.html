@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Price Predictor (Ridge Regression)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Smartphone Price Predictor</h1>
+        <p class="subtitle">Enter smartphone specs to predict its selling price.</p>
+
+        <form action="/" method="post">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="brand">Brand</label>
+                    <select name="Brand" required>
+                        {% for brand in brands %}
+                        <option value="{{ brand }}">{{ brand }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="model_year">Model Year</label>
+                    <input type="number" name="Model_Year" placeholder="e.g., 2023" required>
+                </div>
+                <div class="form-group">
+                    <label for="screen_size">Screen Size (Inches)</label>
+                    <input type="number" name="Screen_Size_Inches" placeholder="e.g., 6.5" required step="any">
+                </div>
+                <div class="form-group">
+                    <label for="ram">RAM (GB)</label>
+                    <input type="number" name="RAM_GB" placeholder="e.g., 8" required>
+                </div>
+                <div class="form-group">
+                    <label for="storage">Storage (GB)</label>
+                    <input type="number" name="Storage_GB" placeholder="e.g., 128" required>
+                </div>
+                <div class="form-group">
+                    <label for="battery">Battery (mAh)</label>
+                    <input type="number" name="Battery_mAh" placeholder="e.g., 5000" required>
+                </div>
+                <div class="form-group">
+                    <label for="camera">Camera (MP)</label>
+                    <input type="number" name="Camera_MP" placeholder="e.g., 48" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (g)</label>
+                    <input type="number" name="Weight_g" placeholder="e.g., 185" required>
+                </div>
+            </div>
+            <button type="submit">Predict Price</button>
+        </form>
+
+        {% if prediction_result %}
+        <div class="result {{ prediction_result.class }}">
+            <h3>{{ prediction_result.text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

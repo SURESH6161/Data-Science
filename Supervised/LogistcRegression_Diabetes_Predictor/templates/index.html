@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🩺 Diabetes Predictor</h1>
+        <p class="subtitle">Enter patient details to predict the likelihood of diabetes.</p>
+
+        <form action="/" method="post">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="pregnancies">Pregnancies</label>
+                    <input type="number" name="pregnancies" placeholder="e.g., 1" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="glucose">Glucose</label>
+                    <input type="number" name="glucose" placeholder="e.g., 148" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="blood_pressure">Blood Pressure</label>
+                    <input type="number" name="blood_pressure" placeholder="e.g., 72" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="skin_thickness">Skin Thickness</label>
+                    <input type="number" name="skin_thickness" placeholder="e.g., 35" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="insulin">Insulin</label>
+                    <input type="number" name="insulin" placeholder="e.g., 0" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="bmi">BMI</label>
+                    <input type="number" name="bmi" placeholder="e.g., 33.6" required step="any" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="diabetes_pedigree">Diabetes Pedigree Func.</label>
+                    <input type="number" name="diabetes_pedigree" placeholder="e.g., 0.627" required step="any" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" placeholder="e.g., 50" required min="0">
+                </div>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_result %}
+        <div class="result {{ prediction_result.class }}">
+            <h3>{{ prediction_result.text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

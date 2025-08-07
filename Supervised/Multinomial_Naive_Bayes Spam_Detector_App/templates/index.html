@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Spam Detector (Naive Bayes)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📧 SMS Spam Detector</h1>
+        <p class="subtitle">Enter a message below to classify it as Spam or Ham.</p>
+
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="message">Message Text</label>
+                <textarea id="message" name="message" rows="6" placeholder="Type or paste your message here..." required></textarea>
+            </div>
+            <button type="submit">Classify Message</button>
+        </form>
+
+        {% if prediction_result %}
+        <div class="result {{ prediction_result.class }}">
+            <h3>{{ prediction_result.text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

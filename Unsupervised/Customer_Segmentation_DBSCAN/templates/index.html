@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation (DBSCAN)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🛒 Customer Segmentation (DBSCAN)</h1>
+        <p class="subtitle">Enter customer spending habits to classify them into a segment.</p>
+
+        <form action="/" method="post">
+            <div class="form-grid">
+                {% for col in columns %}
+                <div class="form-group">
+                    <label for="{{ col }}">{{ col.replace('_', ' ')|title }}</label>
+                    <input type="number" name="{{ col }}" placeholder="e.g., 5000" required step="any" min="0">
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit">Classify Customer</button>
+        </form>
+
+        {% if prediction_result %}
+        <div class="result {{ prediction_result.class }}">
+            <h3>{{ prediction_result.text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

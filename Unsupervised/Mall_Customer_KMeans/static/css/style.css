@@ -1,0 +1,99 @@
+/* static/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 550px;
+    width: 90%;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #3a3a3a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #028090;
+    box-shadow: 0 0 0 4px rgba(2, 128, 144, 0.1);
+}
+
+button {
+    width: 100%;
+    background: linear-gradient(90deg, #02c39a, #028090);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(2, 128, 144, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(2, 128, 144, 0.3);
+}
+
+.result {
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05em;
+    text-align: center;
+}
+/* Unique colors for each cluster */
+.result.cluster-0 { background-color: #e0e0e0; border-left: 6px solid #616161; color: #313131; }
+.result.cluster-1 { background-color: #d4edda; border-left: 6px solid #28a745; color: #155724; }
+.result.cluster-2 { background-color: #cce5ff; border-left: 6px solid #007bff; color: #004085; }
+.result.cluster-3 { background-color: #fff3cd; border-left: 6px solid #ffc107; color: #856404; }
+.result.cluster-4 { background-color: #f8d7da; border-left: 6px solid #dc3545; color: #721c24; }
+.result.error { background-color: #f8d7da; border-left: 6px solid #dc3545; color: #721c24; }

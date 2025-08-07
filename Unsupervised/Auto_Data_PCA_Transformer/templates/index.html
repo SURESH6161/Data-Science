@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCA Data Transformer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 PCA Auto Data Transformer</h1>
+        <p class="subtitle">Enter car attributes to transform them into 2 Principal Components.</p>
+
+        <form action="/" method="post">
+            <div class="form-grid">
+                {% for col in columns %}
+                <div class="form-group">
+                    <label for="{{ col }}">{{ col.replace('_', ' ')|title }}</label>
+                    <input type="number" name="{{ col }}" placeholder="0.0" required step="any">
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit">Transform Data</button>
+        </form>
+
+        {% if prediction_result %}
+        <div class="result {{ prediction_result.class }}">
+            <h3>{{ prediction_result.text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

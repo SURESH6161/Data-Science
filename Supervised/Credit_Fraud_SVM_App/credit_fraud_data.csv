@@ -1,0 +1,6 @@
+age,income,loan_amount,credit_score,open_accounts,debt_to_income_ratio,transaction_amount,transaction_time_hour,transaction_location_match,is_fraud
+25,40000,10000,650,3,0.3,200,14,1,0
+45,85000,20000,720,5,0.25,500,10,1,0
+39,60000,15000,680,4,0.4,1500,23,0,1
+29,30000,5000,610,2,0.5,50,3,1,0
+50,120000,25000,790,6,0.2,10000,12,0,1
