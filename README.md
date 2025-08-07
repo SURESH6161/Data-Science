@@ -15,7 +15,7 @@ Supervised learning uses labeled data to train models for predictions. It is div
 - **Random Forest** – [Random Forest Repo](Supervised/Random_Forest_Algoritham.ipynb)  
 - **SVM (Support Vector Machines)** – [SVM Repo](https://github.com/pb111/Support-Vector-Machines-Project)  
 - **KNN (K-Nearest Neighbors)** – [KNN Repo](https://github.com/ghimiresunil/Scratch-implementation-of-KNN)  
-- **Logistic Regression** – [Logistic Regression Repo](https://github.com/pb111/Logistic-Regression-in-Python-Project)  
+- **Logistic Regression** – [Logistic Regression Repo](https://github.com/SURESH6161/Data-Science/blob/8d0c94d3f99e593ead5df3a66c4cbd0712da5c69/Supervised/%20%20LogisticRegression.ipynb)  
 - **Naive Bayes** – [Naive Bayes Repo](https://github.com/shiivashaakeri/Naive-Bayes-Classifier-From-Scratch)  
 - **Gradient Boosting** – [Gradient Boosting Repo](https://github.com/dmlc/xgboost)
 
@@ -23,7 +23,7 @@ Supervised learning uses labeled data to train models for predictions. It is div
 
 ### 2. Regression
 
-- **Linear Regression** – [Linear Regression Repo](https://github.com/tatwan/Linear-Regression-Implementation-in-Python)  
+- **Linear Regression** – [Linear Regression Repo](Supervised/LinearRegression.ipynb)  
 - **Ridge Regression** – [Ridge Regression Repo](https://github.com/akash18tripathi/Linear-Regression-from-Scratch)  
 - **Lasso Regression** – [Lasso Regression Repo](https://github.com/akash18tripathi/Linear-Regression-from-Scratch)  
 - **Elastic Net Regression** – [Elastic Net Repo](https://github.com/marcogdepinto/Python-for-Data-Analysis-and-Machine-Learning)
@@ -37,7 +37,7 @@ Unsupervised learning uses **unlabeled data** to find patterns and relationships
 ### 1. Clustering
 
 - **K-Means** – [K-Means Repo](https://github.com/topics/k-means)  
-- **Hierarchical Clustering** – [Hierarchical Clustering Repo](https://github.com/topics/hierarchical-clustering)  
+- **Hierarchical Clustering** – [Hierarchical Clustering Repo](Supervised/Hierarchical_Clustering.ipynb)  
 - **DBSCAN** – [DBSCAN Repo](https://github.com/topics/dbscan)
 
 ### 2. Dimensionality Reduction
