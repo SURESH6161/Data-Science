@@ -1,58 +1,30 @@
-# app.py
-
-from flask import Flask, request, render_template
-import pickle
-import numpy as np
-import pandas as pd
+from flask import Flask, render_template, request
+import os
+from create_model import run_dbscan
 
 app = Flask(__name__)
 
-# Load the trained classifier pipeline
-try:
-    model = pickle.load(open('customer_dbscan_model.pkl', 'rb'))
-except FileNotFoundError:
-    print("Model file 'customer_dbscan_model.pkl' not found. Please run create_classifier_model.py first.")
-    exit()
+UPLOAD_FOLDER = "uploads"
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Get the feature names from the dataset to build the form dynamically
-try:
-    df = pd.read_csv('Fresh-Milk-Grocery-Frozen-DetergentsPaper-Delicassen (1).csv')
-    df_cols = df.drop(['Channel', 'Region'], axis=1).columns.tolist()
-except (FileNotFoundError, KeyError):
-    # Fallback if file is missing or doesn't have Channel/Region
-    df_cols = ['Fresh', 'Milk', 'Grocery', 'Frozen', 'Detergents_Paper', 'Delicassen']
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        # Save uploaded file
+        file = request.files["file"]
+        if file:
+            file_path = os.path.join(UPLOAD_FOLDER, file.filename)
+            file.save(file_path)
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
-    prediction_result = None
-    if request.method == 'POST':
-        try:
-            # Collect all features from the form in the correct order
-            input_features = [float(request.form[col]) for col in df_cols]
-            final_features = np.array([input_features])
+            # Run DBSCAN
+            df, plot_path = run_dbscan(file_path)
 
-            # Make a prediction. The pipeline handles scaling automatically.
-            prediction = model.predict(final_features)
-            predicted_cluster_num = prediction[0]
-            
-            # Prepare the result for display
-            if predicted_cluster_num == -1:
-                 prediction_text = "Prediction: Outlier / Unclassified Customer"
-            else:
-                 prediction_text = f"Prediction: Belongs to Customer Segment #{predicted_cluster_num + 1}"
-            
-            prediction_result = {
-                "class": f"cluster-{predicted_cluster_num}",
-                "text": prediction_text
-            }
+            # Convert dataframe to HTML table
+            table_html = df.to_html(classes="table table-striped", index=False)
+            return render_template("index.html", table=table_html, plot_path=plot_path)
 
-        except Exception as e:
-            prediction_result = {
-                "class": "error",
-                "text": f"Error: {e}. Please ensure all fields have valid numerical data."
-            }
-            
-    return render_template('index.html', prediction_result=prediction_result, columns=df_cols)
+    return render_template("index.html", table=None, plot_path=None)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

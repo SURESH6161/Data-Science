@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Segmentation (DBSCAN)</title>
+    <title>Customer Behavior DBSCAN</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h1 class="text-center mb-4 title">Customer Behavior DBSCAN Clustering</h1>
 
-    <div class="container">
-        <h1>🛒 Customer Segmentation (DBSCAN)</h1>
-        <p class="subtitle">Enter customer spending habits to classify them into a segment.</p>
-
-        <form action="/" method="post">
-            <div class="form-grid">
-                {% for col in columns %}
-                <div class="form-group">
-                    <label for="{{ col }}">{{ col.replace('_', ' ')|title }}</label>
-                    <input type="number" name="{{ col }}" placeholder="e.g., 5000" required step="any" min="0">
-                </div>
-                {% endfor %}
-            </div>
-            <button type="submit">Classify Customer</button>
+        <!-- Upload Form -->
+        <form method="POST" enctype="multipart/form-data" class="text-center mb-4">
+            <input type="file" name="file" class="form-control mb-3" required>
+            <button type="submit" class="btn btn-gradient">Run DBSCAN</button>
         </form>
 
-        {% if prediction_result %}
-        <div class="result {{ prediction_result.class }}">
-            <h3>{{ prediction_result.text }}</h3>
+        <!-- Clustered Data Table -->
+        {% if table %}
+        <div class="mt-5">
+            <h2 class="section-title">📊 Clustered Data</h2>
+            <div class="table-responsive table-container">
+                {{ table | safe }}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Cluster Visualization -->
+        {% if plot_path %}
+        <div class="mt-5">
+            <h2 class="section-title">🎨 Cluster Visualization</h2>
+            <div class="plot-container text-center">
+                <img src="{{ url_for('static', filename='clusters.png') }}" class="img-fluid plot-image" alt="Clusters">
+            </div>
         </div>
         {% endif %}
     </div>
-
+</div>
 </body>
 </html>

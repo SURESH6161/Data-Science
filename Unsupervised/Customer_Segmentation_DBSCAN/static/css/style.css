@@ -1,132 +1,76 @@
-/* static/css/style.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+/* Global styling */
 body {
+    background: linear-gradient(135deg, #e0f7fa, #e1bee7);
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px 0;
-    margin: 0;
 }
 
-.container {
-    max-width: 960px;
-    width: 90%;
-    padding: 40px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    font-weight: 700;
-    font-size: 32px;
-    color: #2c7a7b;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #6c757d;
-    margin-bottom: 40px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 30px;
-}
-
-.form-group {
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 0.9em;
-    color: #495057;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 10px 12px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    border: 2px solid #ced4da;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
-}
-
-input[type="number"]:focus {
-    outline: none;
-    border-color: #319795;
-    box-shadow: 0 0 0 4px rgba(49, 151, 149, 0.15);
-}
-
-button {
-    width: 50%;
-    margin: 10px auto 0;
-    display: block;
-    background: linear-gradient(90deg, #319795, #2c7a7b);
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 14px 0;
+/* Card styling */
+.card {
+    background: #fff;
+    border-radius: 15px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(49, 151, 149, 0.2);
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(49, 151, 149, 0.3);
+/* Title */
+.title {
+    font-weight: 700;
+    color: #4a148c;
 }
 
-.result {
-    margin-top: 30px;
-    padding: 18px;
-    border-radius: 8px;
+/* Section titles */
+.section-title {
     font-weight: 600;
-    font-size: 1.1em;
+    color: #6a1b9a;
+    margin-bottom: 15px;
 }
 
-.result.cluster--1 { /* Outlier class */
-    background-color: #f8d7da;
-    border-left: 6px solid #dc3545;
-    color: #721c24;
+/* Gradient Button */
+.btn-gradient {
+    background: linear-gradient(90deg, #6a1b9a, #8e24aa);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    transition: 0.3s;
+    font-weight: 500;
 }
 
-.result.cluster-0 {
-    background-color: #d1e7dd;
-    border-left: 6px solid #198754;
-    color: #0f5132;
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #8e24aa, #ab47bc);
+    transform: scale(1.05);
 }
 
-.result.cluster-1 {
-    background-color: #cce5ff;
-    border-left: 6px solid #007bff;
-    color: #004085;
+/* Table Styling */
+.table-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.result.cluster-2 {
-    background-color: #fff3cd;
-    border-left: 6px solid #ffc107;
-    color: #856404;
+.table {
+    margin-bottom: 0;
 }
 
-.result.error {
-    background-color: #f8d7da;
-    border-left: 6px solid #dc3545;
-    color: #721c24;
+.table thead {
+    background: #6a1b9a;
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: #f3e5f5;
+    transition: 0.2s;
+}
+
+/* Plot Styling */
+.plot-container {
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.plot-image {
+    border-radius: 8px;
+    max-height: 450px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }

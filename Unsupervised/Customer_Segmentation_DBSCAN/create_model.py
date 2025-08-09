@@ -1,59 +1,52 @@
-# create_classifier_model.py
-
 import pandas as pd
-from sklearn.cluster import DBSCAN
+import numpy as np
 from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.pipeline import make_pipeline
-import pickle
+from sklearn.cluster import DBSCAN
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+import os
 
-print("Starting model creation process...")
 
-# Load the dataset
-try:
-    df = pd.read_csv('Fresh-Milk-Grocery-Frozen-DetergentsPaper-Delicassen (1).csv')
-    # Assuming the first two columns 'Channel' and 'Region' are not part of the spending features
-    # If they are meant to be features, this line should be adjusted.
-    X = df.drop(['Channel', 'Region'], axis=1)
-    print("Dataset loaded and prepared successfully.")
-except FileNotFoundError:
-    print("Error: 'Fresh-Milk-Grocery-Frozen-DetergentsPaper-Delicassen (1).csv' not found.")
-    exit()
-except KeyError:
-    print("Warning: 'Channel' or 'Region' columns not found. Using all columns as features.")
-    X = df
+def run_dbscan(csv_path, eps=0.8, min_samples=4):
+    # Load dataset
+    df = pd.read_csv(csv_path)
 
-# --- Step 1: Scale the data and apply DBSCAN to get cluster labels ---
-print("Scaling data and running DBSCAN to find clusters...")
-# Scaling is crucial for distance-based algorithms like DBSCAN
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+    # Features to cluster on
+    features = df.columns.tolist()  # Use all columns from your CSV
+    X = df[features].values
 
-# DBSCAN parameters - these may need tuning for different datasets
-# eps is the max distance between two samples for one to be considered as in the neighborhood of the other
-# min_samples is the number of samples in a neighborhood for a point to be considered as a core point
-dbscan = DBSCAN(eps=1.5, min_samples=5)
-cluster_labels = dbscan.fit_predict(X_scaled)
-df['cluster'] = cluster_labels
+    # Scale the data
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
 
-print(f"DBSCAN found {len(set(cluster_labels)) - 1} clusters and an outlier group.")
-print(f"Cluster distribution:\n{df['cluster'].value_counts()}")
+    # Run DBSCAN
+    model = DBSCAN(eps=eps, min_samples=min_samples)
+    labels = model.fit_predict(X_scaled)
+    df['Cluster'] = labels
 
-# --- Step 2: Train a classifier on the generated cluster labels ---
-# This classifier will predict the cluster for new data points.
-# We use the original (unscaled) X data to train the final pipeline.
-print("Training a K-Nearest Neighbors classifier on the DBSCAN clusters...")
+    # Save updated CSV
+    output_csv = "clustered_customers.csv"
+    df.to_csv(output_csv, index=False)
 
-final_pipeline = make_pipeline(
-    StandardScaler(),
-    KNeighborsClassifier(n_neighbors=5)
-)
+    # Create PCA plot
+    pca = PCA(n_components=2)
+    X_pca = pca.fit_transform(X_scaled)
+    plt.figure(figsize=(8, 6))
 
-# Train the pipeline on the original features and the DBSCAN-generated labels
-final_pipeline.fit(X, cluster_labels)
+    unique_labels = np.unique(labels)
+    for lbl in unique_labels:
+        mask = labels == lbl
+        if lbl == -1:
+            plt.scatter(X_pca[mask, 0], X_pca[mask, 1], label="Noise", marker='x')
+        else:
+            plt.scatter(X_pca[mask, 0], X_pca[mask, 1], label=f"Cluster {lbl}")
 
-# --- Step 3: Save the trained classifier pipeline ---
-with open('customer_dbscan_model.pkl', 'wb') as file:
-    pickle.dump(final_pipeline, file)
+    plt.title("DBSCAN Clusters (PCA Projection)")
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+    plt.legend()
+    plot_path = os.path.join("static", "clusters.png")
+    plt.savefig(plot_path, bbox_inches="tight")
+    plt.close()
 
-print("\nClassifier pipeline trained and saved as 'customer_dbscan_model.pkl'")
+    return df, plot_path
