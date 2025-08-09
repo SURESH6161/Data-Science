@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Exam Pass Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #3268bb;
+            box-shadow: 0 0 8px rgba(39, 131, 174, 0.4);
+        }
+
+        button {
+            width: 100%;
+            background-color: #214ab9;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 14px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(39, 174, 96, 0.4);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #830032;
+            box-shadow: 0 6px 15px rgba(14, 68, 112, 0.6);
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ecf9f1;
+            border-left: 6px solid #293be0;
+            border-radius: 8px;
+            color: #2c3e50;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .result h3 {
+            margin-top: 0;
+            font-weight: 700;
+            color: #001b66;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exam Pass Predictor</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="hours_studied">Hours Studied:</label>
+            <input type="number" id="hours_studied" name="hours_studied" required min="0" step="0.1">
+        </div>
+
+        <div class="form-group">
+            <label for="attendance">Attendance:</label>
+            <input type="number" id="attendance" name="attendance" required min="0" max="100" step="0.1">
+        </div>
+
+        <div class="form-group">
+            <label for="assignments_completed">Assignments Completed:</label>
+            <input type="number" id="assignments_completed" name="assignments_completed" required min="0" max="100">
+        </div>
+
+        <div class="form-group">
+            <label for="sleep_hours">Sleep Hours    :</label>
+            <input type="number" id="sleep_hours" name="sleep_hours" required min="0" step="0.1">
+        </div>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h3>Prediction Result:</h3>
+        <p>Based on the input, the predicted pass status is: <strong>{{ prediction }}</strong></p>
+    </div>
+    {% endif %}
+</body>
+
+</html>

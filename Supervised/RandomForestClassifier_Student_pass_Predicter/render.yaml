@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: new-data-model1
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
