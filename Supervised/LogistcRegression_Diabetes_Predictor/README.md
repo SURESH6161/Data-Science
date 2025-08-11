@@ -1,5 +1,4 @@
-Of course. Here is a detailed README.md for the Diabetes Predictor project, including full instructions on how to run it.
-
+# Check the Live Page  https://logistic-alogrithm-heart-disease-find.onrender.com/ 
 -----
 
 # Diabetes Predictor using Logistic Regression 🩺
