@@ -55,6 +55,20 @@ pip install pandas scikit-learn graphviz pydotplus
     ```
 3.  Open the Jupyter Notebook `Decision tree Movie Interest Predictor.ipynb` and run the cells.
 
+### File Structure
+```
+Decision_tree_Movie_Interest_Predictor/
+├── Movie_Interest_app.py
+├── movie_interest.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```  
+
 ## The Code & Results: Bringing the Model to Life
 
 -----
