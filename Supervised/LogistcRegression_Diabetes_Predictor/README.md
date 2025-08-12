@@ -1,13 +1,13 @@
 # Check the Live Page  https://logistic-alogrithm-heart-disease-find.onrender.com/ 
 -----
 
-# Diabetes Predictor using Logistic Regression 🩺
+# Diabetes Predictor using Logistic Regression 
 
 This project uses a **Logistic Regression** model to predict whether a patient has diabetes based on certain diagnostic medical measurements. The entire data analysis and model building process is contained within a Jupyter Notebook.
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`LogisticRegression_Diabetes_Predictor.ipynb`**: This is the core of the project. It's a Jupyter Notebook that contains all the Python code for:
       * Loading and exploring the dataset.
@@ -16,10 +16,22 @@ This project uses a **Logistic Regression** model to predict whether a patient h
       * Training a Logistic Regression classifier.
       * Evaluating the model's performance.
   * **`diabetes.csv`**: This is the dataset used for the project. It contains several medical predictor variables and one target variable, `Outcome`.
+```
+LogistcRegression_Diabetes_Predictor/
+├── Diabetes_Predictor_app.py
+├── diabetes.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 Follow these instructions to explore the project and run the code on your local machine.
 
@@ -114,8 +126,11 @@ In the browser tab that just opened, click on the **`LogisticRegression_Diabetes
 
 ## 🖼️ Screenshot
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
 
 ## Disclaimer
