@@ -1,5 +1,5 @@
 
-# Automated Data Preprocessing & PCA Transformer ⚙️
+# Automated Data Preprocessing & PCA Transformer
 
 This project demonstrates how to build a reusable data preprocessing pipeline using **scikit-learn**. The pipeline automates the process of cleaning and transforming a raw dataset and then applies **Principal Component Analysis (PCA)** for dimensionality reduction.
 
@@ -7,7 +7,7 @@ The final output is a single `preprocessor.pkl` file that can be saved and loade
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Auto Data Transformer.ipynb`**: This is the core Jupyter Notebook where the entire pipeline is designed and built. It includes:
       * Loading and inspecting the raw data.
@@ -17,10 +17,21 @@ The final output is a single `preprocessor.pkl` file that can be saved and loade
       * Saving the final, complete pipeline object to a file.
   * **`preprocessor.pkl`**: The main output of this project. It is a serialized Python object containing the entire, fitted preprocessing and PCA pipeline. It's ready to be used to transform new data.
   * **`auto_data.csv`**: The sample dataset used within the notebook to build and demonstrate the transformation pipeline.
-
+```
+Auto_Data_PCA_Transformer/
+├── Auto_Data_PCA_app.py
+├── auto-mpg.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 -----
 
-## 🚀 How to Use This Project
+## How to Use This Project
 
 This project is not a web app; it's a tool. The goal is to understand how the pipeline is built and then learn how to use the final `.pkl` file to transform data.
 
@@ -122,13 +133,17 @@ This script shows how easily you can apply a complex series of transformations t
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
+### Step 1
 ![General interface](img1.png)
+### Step 2
 ![Filling in the details](img2.png)
+### Step 3
 ![Final predicted result](img3.png)
+
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is an educational demonstration of building a reusable data processing pipeline with scikit-learn and PCA. The specific steps and parameters are tailored to the sample `auto_data.csv` and would need to be adapted for different datasets.
