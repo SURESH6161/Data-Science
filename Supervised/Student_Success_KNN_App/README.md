@@ -1,5 +1,5 @@
 
-# Student Success Predictor using K-Nearest Neighbors (KNN) 🎓
+# Student Success Predictor using K-Nearest Neighbors (KNN)
 
 This project predicts a student's academic outcome—whether they are likely to **Graduate**, **Drop out**, or remain **Enrolled**. The prediction is made using a **K-Nearest Neighbors (KNN)** classifier, which is trained on a dataset of student demographic, social, and academic data.
 
@@ -7,7 +7,7 @@ The final model is deployed as an interactive web application using **Flask**, a
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Student Success Prediction.ipynb`**: The complete Jupyter Notebook that details the project from start to finish. It includes data loading, cleaning, exploratory data analysis (EDA), and the training and evaluation of the KNN model.
   * **`app.py`**: The Flask backend script. It loads the trained KNN model and the preprocessor, manages the web routes, and processes user input to generate a prediction.
@@ -16,10 +16,22 @@ The final model is deployed as an interactive web application using **Flask**, a
   * **`student_data.csv`**: The dataset containing various features about students, which is used to train and test the model.
   * **`templates/index.html`**: The HTML file that creates the web application's user interface, including the form for entering student information.
   * **`static/style.css`**: The CSS file used for styling the web page to provide a clean and intuitive user experience.
+```
+Student_Success_KNN_App/
+├── Student_Success_app.py
+├── student-mat.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 You can either run the final web application or explore how the model was created in the Jupyter Notebook.
 
@@ -107,13 +119,17 @@ If you want to understand the data analysis and model-building steps, you can ru
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
+
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is intended for educational and demonstration purposes only. The predictions are based on statistical patterns in the dataset and should not be used as a sole determinant of a student's potential or for making critical decisions about their academic career.
