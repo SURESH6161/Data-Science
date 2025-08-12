@@ -1,7 +1,7 @@
 
 -----
 
-### Objective: Predicting Survival 🚢
+### Objective: Predicting Survival 
 
 The goal is to use the historical passenger data from the Titanic to build a machine learning model that can predict whether a given passenger would have survived the shipwreck. This is a classic classification problem: the answer is a "yes" or "no" (or 1 or 0).
 
@@ -107,7 +107,10 @@ jupyter lab
 
 This command will open a new tab in your web browser. From there, you can navigate to and click on the `LinearRegression Titanic Survival Predictor.ipynb` file to open it and run the cells.
 
-
+## ScreenShots
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
