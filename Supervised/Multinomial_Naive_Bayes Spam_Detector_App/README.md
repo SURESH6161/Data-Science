@@ -1,7 +1,7 @@
 
 -----
 
-# Spam Detector Web App using Multinomial Naive Bayes 📧
+# Spam Detector Web App using Multinomial Naive Bayes 
 
 This project implements a spam detector using a **Multinomial Naive Bayes** classifier. It is deployed as a simple web application using Flask, where users can enter a text message and get a prediction on whether it is "Spam" or "Not Spam" (Ham).
 
@@ -9,7 +9,7 @@ The model is trained on a dataset of SMS messages and uses a `CountVectorizer` t
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Spam Detector.ipynb`**: A Jupyter Notebook that walks through the entire process of creating the model. It includes data loading, text preprocessing, feature extraction using `CountVectorizer`, training the Multinomial Naive Bayes model, and evaluating its accuracy.
   * **`app.py`**: The backend of the web application. This Flask script loads the pre-trained model and vectorizer, handles user requests from the web page, and returns the classification result.
@@ -17,10 +17,22 @@ The model is trained on a dataset of SMS messages and uses a `CountVectorizer` t
   * **`vectorizer.pkl`**: The saved `CountVectorizer` object. This is crucial for transforming new, user-submitted text in the exact same way the original training data was transformed.
   * **`spam.csv`**: The dataset containing labeled SMS messages used to train and test the model.
   * **`templates/home.html`**: The HTML file that creates the simple user interface for the web application, including the text input form and the area to display the result.
+```
+Multinomial_Naive_Bayes Spam_Detector_App/
+├── Spam_Detector_app.py
+├── spam.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 You can either run the final web application directly or explore the model creation process in the Jupyter Notebook.
 
@@ -107,14 +119,17 @@ If you want to understand how the model was built, you can run the Jupyter Noteb
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
 
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is created for educational and demonstration purposes only. The model's accuracy is dependent on the dataset it was trained on, and it should not be used for any critical commercial or production applications.
