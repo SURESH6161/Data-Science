@@ -124,7 +124,7 @@ In the browser tab that just opened, click on the **`LogisticRegression_Diabetes
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
 ## Step 1
 ![General interface](img1.png)
