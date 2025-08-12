@@ -41,6 +41,19 @@ The repository contains the following files:
   * `app.py`: The **Flask application** script that loads the trained SVM model and serves the user interface.
   * `credit_fraud_svm_app.pkl`: The saved, pre-trained SVM model file.
   * `requirements.txt`: A list of all required Python libraries.
+  ```
+  Credit_Fraud_SVM_App/
+├── Creditcard_app.py
+├── fraud_transaction.csv
+├── non_fraud_transaction.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+  ```
 
 -----
 
