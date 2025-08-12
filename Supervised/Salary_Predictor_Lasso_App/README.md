@@ -1,7 +1,7 @@
 
 -----
 
-# Data Professional Salary Predictor 💼
+# Data Professional Salary Predictor 
 
 This project is a web application that predicts the salary of a data professional based on various factors like job title, years of experience, and company rating. The prediction model is built using **Lasso Regression**, a linear model that performs feature selection to prevent overfitting.
 
@@ -9,7 +9,7 @@ The entire project, from data cleaning and model training to deployment, is incl
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Salary Predictor.ipynb`**: This Jupyter Notebook contains the complete data science workflow. It covers data loading, extensive cleaning, exploratory data analysis (EDA), feature engineering, and the training and evaluation of the Lasso Regression model.
   * **`app.py`**: The core Flask application. It loads the pre-trained Lasso model, manages the web routes, and processes user input to return a salary prediction.
@@ -17,10 +17,22 @@ The entire project, from data cleaning and model training to deployment, is incl
   * **`Salary Prediction of Data Professions.csv`**: The raw dataset containing salary information and job characteristics for various data professions.
   * **`templates/home.html`**: The HTML template that creates the user interface, including the input form for users to enter job details.
   * **`static/style.css`**: The CSS file used to style the web application's front-end for a better user experience.
+```
+Salary_Predictor_Lasso_App/
+├── Salary_Predictor_app.py
+├── Salary.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 You can either interact with the final web application or dive into the code by exploring the Jupyter Notebook.
 
@@ -108,13 +120,16 @@ To understand how the model was built, you can run the notebook.
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project was created for educational and portfolio purposes. The predictions are based on the patterns in the training dataset and should be considered estimates, not guaranteed salary figures. The model's accuracy is limited by the scope and quality of the data used.
