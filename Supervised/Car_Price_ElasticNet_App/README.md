@@ -3,7 +3,7 @@
 
 # Car Price Prediction with ElasticNet Regression
 
-This project predicts the price of used cars based on various features using an **ElasticNet regression model**. The trained model is deployed as a simple web application using Flask, allowing users to get price predictions in real-time. 🚗
+This project predicts the price of used cars based on various features using an **ElasticNet regression model**. The trained model is deployed as a simple web application using Flask, allowing users to get price predictions in real-time. 
 
 -----
 
@@ -39,6 +39,21 @@ The repository is organized as follows:
   * `app.py`: The **Flask application** script. It loads the trained model and serves the HTML interface.
   * `car_price_elasticnet_app.pkl`: The serialized (saved) trained ElasticNet model file.
   * `requirements.txt`: A list of all Python libraries required to run the project.
+    
+```
+  Car_Price_ElasticNet_App/
+├── Year-Mileagein1000s-EngineSizeL-Horsepower-NumberofDoors-FuelType0Gas1Diesel-Price.csv
+├── app.py
+├── create_model.py
+├── requirements.txt
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 -----
 
