@@ -81,6 +81,9 @@ The model is trained using the `model.fit()` command, which builds the internal 
 
 Finally, the trained decision tree can be visualized to understand how it makes predictions. This visualization is incredibly powerful because it makes the model transparent. You can see exactly why it predicted "Action" for a 22-year-old male, for example, making the results easy to understand and explain.
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
