@@ -64,6 +64,20 @@ After training the model, the final step is to test its performance on data it h
 ## How to Run the Project
 
 To run the analysis on your own machine, you'll need Python and a few common data science libraries. Follow these steps.
+  ### File Structure
+   ```
+   LinearRegression_Titanic_Survival_Predictor/
+├── Titanic_Survival_app.py
+├── test.csv
+├── train.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+   ```
 
 ### Step 1: Clone the Repository
 
