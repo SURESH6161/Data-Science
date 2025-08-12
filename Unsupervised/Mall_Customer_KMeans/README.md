@@ -1,5 +1,5 @@
 
-# Customer Segmentation using K-Means Clustering 🎯
+# Customer Segmentation using K-Means Clustering
 
 This project segments mall customers into distinct groups using the **K-Means Clustering** algorithm, one of the most popular and fundamental methods in unsupervised learning. The analysis focuses on identifying customer personas based on their annual income and spending score, providing actionable insights for targeted marketing.
 
@@ -7,7 +7,7 @@ A key part of the analysis involves using the **Elbow Method** to determine the 
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Mall Customer Segmentation.ipynb`**: This is the project's core Jupyter Notebook. It provides a complete walkthrough of the K-Means clustering process, including:
       * Loading and inspecting the customer data.
@@ -15,10 +15,21 @@ A key part of the analysis involves using the **Elbow Method** to determine the 
       * Training the K-Means model with the chosen value of 'k'.
       * Visualizing the final customer segments.
   * **`Mall_Customers.csv`**: The dataset used for the analysis, which contains customer information like `Age`, `Annual Income (k$)`, and `Spending Score (1-100)`.
-
+```
+Mall_Customer_KMeans/
+├── Customer_Segmentation_app.py
+├── Mall_Customers.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 -----
 
-## 🧠 Core Concept: K-Means & The Elbow Method
+## Core Concept: K-Means & The Elbow Method
 
 **K-Means Clustering** is an algorithm that aims to partition data into 'k' distinct, non-overlapping clusters. It works by assigning each data point to the cluster with the nearest mean (called the cluster *centroid*), then recalculating the centroid of each cluster. This process repeats until the clusters are stable.
 
@@ -26,7 +37,7 @@ To find the best value for 'k', we use the **Elbow Method**. This involves runni
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 Follow these steps to replicate the analysis on your machine.
 
@@ -95,12 +106,17 @@ In the browser tab that opens, click on **`Mall Customer Segmentation.ipynb`**. 
 
 -----
 
-## 🖼️ Screenshot
-
+## Screenshot
+### Step 1
+![](img1.png)
+### Step 2
+![](img2.png)
+### Step 3
+![](img3.png)
 
 
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is an educational demonstration of the K-Means algorithm. The insights and customer segments are derived solely from the provided dataset and should be considered as a practical example of a clustering task.
