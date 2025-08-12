@@ -1,6 +1,6 @@
 Of course. Here is a detailed README.md for the Smartphone Price Predictor application.
 
-# Smartphone Price Predictor using Ridge Regression 📱
+# Smartphone Price Predictor using Ridge Regression
 
 This project is a web application that predicts the price of a smartphone based on its technical specifications like RAM, storage, camera resolution, and screen size. The prediction model is built using **Ridge Regression**, a powerful linear algorithm that is effective when features are highly correlated.
 
@@ -8,7 +8,7 @@ The final model is deployed as a user-friendly web application using the **Flask
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Smartphone Price Prediction.ipynb`**: This Jupyter Notebook documents the entire data science process. It includes loading the dataset, data cleaning, exploratory data analysis (EDA), feature engineering, and the training and evaluation of the Ridge Regression model.
   * **`app.py`**: The Flask application script. It loads the pre-trained model and preprocessor, handles the web interface, and processes user input to deliver a price prediction.
@@ -16,10 +16,22 @@ The final model is deployed as a user-friendly web application using the **Flask
   * **`preprocessor.pkl`**: A serialized data preprocessor object (likely a `ColumnTransformer` from scikit-learn). This is a critical component that transforms the raw user input (both numerical and categorical) into the correct format that the model expects.
   * **`smartphones.csv`**: The dataset containing the specifications and prices of various smartphones used to train the model.
   * **`templates/index.html`**: The HTML file that creates the front-end user interface, including the form for inputting smartphone specs.
+```
+Smartphone_Price_Ridge_App/
+├── Mobile_phone_price_app.py
+├── train.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 You can run the final web application directly or explore the model creation process in the Jupyter Notebook.
 
@@ -109,11 +121,14 @@ To see how the model was built and the data was analyzed, you can run the notebo
 
 ## 🖼️ Screenshot
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is intended for educational and demonstration purposes. The predicted prices are estimates based on the patterns found in the dataset and should not be considered exact market values. The model's accuracy is limited by the data it was trained on.
