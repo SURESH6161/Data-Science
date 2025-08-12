@@ -18,6 +18,18 @@ The repository contains the following files:
   * **preprocessor.pkl**: This file contains the pre-trained data preprocessor. The preprocessor is used to scale and transform the user input data into the same format that was used to train the model. This is a crucial step to ensure that the model makes accurate predictions.
   * **templates/index.html**: This is the HTML template for the web application's user interface. It contains the form where users can input their financial information.
   * **static/style.css**: This file contains the CSS code for styling the web application. It is used to customize the appearance of the web page, including the layout, colors, and fonts.
+```
+Loan_Default_GB_App/
+├── Loan_Default_app.py
+├── Loan_status_2007-2017.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 
 ## 🚀 How to Run the Project
 
@@ -104,8 +116,11 @@ You should now see the loan prediction web application. You can fill out the for
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
