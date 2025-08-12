@@ -8,7 +8,7 @@ It includes a **Flask web application** where you can upload datasets, run clust
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Customer_Behavior_DBSCAN/
@@ -27,7 +27,7 @@ Customer_Behavior_DBSCAN/
 
 ---
 
-## 🚀 Features
+## Features
 
 * Upload your own **CSV dataset** for clustering.
 * Automatically detects numeric columns for DBSCAN.
@@ -37,16 +37,16 @@ Customer_Behavior_DBSCAN/
 
 ---
 
-## 🛠 Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/your-username/Customer_Behavior_DBSCAN.git
 cd Customer_Behavior_DBSCAN
 ```
 
-### 2️⃣ Install dependencies
+### Install dependencies
 
 Make sure you have **Python 3.8+** installed.
 
@@ -54,7 +54,7 @@ Make sure you have **Python 3.8+** installed.
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run the application
+### Run the application
 
 ```bash
 python app.py
@@ -64,7 +64,7 @@ The app will start at **`http://127.0.0.1:5000`**
 
 ---
 
-## 📊 Example Dataset
+## Example Dataset
 
 The sample dataset `customer_behavior_dbscan.csv` contains features like:
 
@@ -77,7 +77,7 @@ You can replace it with your own dataset — just ensure it’s a **CSV file** w
 
 ---
 
-## ⚙ How It Works
+## How It Works
 
 1. **Upload a CSV file** from the web interface.
 2. **Model Training:** DBSCAN groups data points based on density.
@@ -86,15 +86,20 @@ You can replace it with your own dataset — just ensure it’s a **CSV file** w
 
 ---
 
-## 📷 Screenshot
+## Screenshot
 
+### Step 1
 ![General interface](img1.png)
+### Step 2
 ![Uploading the Data Set](img2.png)
+### Step 3
 ![Final predicted result](img3.png)
+
 ![Final predicted result](img4.png)
+
 ---
 
-## 📌 Dependencies
+## Dependencies
 
 * Flask
 * pandas
@@ -104,14 +109,14 @@ You can replace it with your own dataset — just ensure it’s a **CSV file** w
 
 ---
 
-## 💡 Notes
+## Notes
 
 * Works best when data is **scaled** before DBSCAN.
 * Choose DBSCAN parameters (`eps`, `min_samples`) wisely to get meaningful clusters.
 * You can tweak the parameters in `create_classifier_model.py`.
 
 ---
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is an educational demonstration of applying the DBSCAN clustering algorithm to customer behavior data.  
 The preprocessing steps, chosen features, and parameters (e.g., `eps`, `min_samples`) are tuned for the included sample dataset and may require adjustments for other datasets.  
