@@ -50,5 +50,17 @@ Dataset
 This project uses the [Name of Your Dataset, e.g., Student Performance Dataset].
 - Source: [Provide a link to the dataset, e.g., Kaggle, UCI Repository]
 - Description: The dataset contains [number] student records with attributes like study time, failures, school support, and final grades. The goal is to predict the binary outcome of 'Pass' or 'Fail'.
-- 
+
+## File Structure
+```
+RandomForestClassifier_Student_pass_Predicter/
+├── Student_pass_app.py
+├── student-mat.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
 ```
