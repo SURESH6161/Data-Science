@@ -105,7 +105,9 @@ Open your web browser and navigate to the following address:
 
 You should see a web form where you can input car details to get a price prediction.
 
-
+## Step 1
 ![General interface](img1.png)
+## Step 2
 ![Filling in the details](img2.png)
+## Step 3
 ![Final predicted result](img3.png)
