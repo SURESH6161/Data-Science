@@ -1,5 +1,5 @@
 
-# Customer Segmentation using Hierarchical Clustering 📊
+# Customer Segmentation using Hierarchical Clustering 
 
 This project demonstrates how to segment customers into distinct groups using **Agglomerative Hierarchical Clustering**. By analyzing data from mall customers, specifically their annual income and spending score, we can identify different customer personas. This type of analysis is invaluable for businesses looking to personalize marketing efforts.
 
@@ -7,7 +7,7 @@ The entire process, from creating a dendrogram to determine the optimal number o
 
 -----
 
-## 📄 Files Description
+## Files Description
 
   * **`Hierarchical Clustering.ipynb`**: This is the core Jupyter Notebook for the project. It provides a step-by-step guide that covers:
       * Loading and preparing the customer dataset.
@@ -15,10 +15,21 @@ The entire process, from creating a dendrogram to determine the optimal number o
       * Applying the Agglomerative Hierarchical Clustering algorithm.
       * Visualizing the resulting customer segments on a scatter plot.
   * **`Mall_Customers.csv`**: The dataset used for the analysis, containing features like `Age`, `Annual Income (k$)`, and `Spending Score (1-100)`.
-
+```
+Hierarchical_Clustering_Mall_Customer_Segmentation/
+├── Hierarchical_Clustering_app.py
+├── Mall_Customers.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
+```
 -----
 
-## 🧠 Core Concept: Hierarchical Clustering & Dendrograms
+## Core Concept: Hierarchical Clustering & Dendrograms
 
 **Hierarchical Clustering** is an algorithm that builds a hierarchy of clusters. The "bottom-up" or *agglomerative* approach works as follows:
 
@@ -30,7 +41,7 @@ The key tool used with this method is the **Dendrogram**, a tree-like diagram th
 
 -----
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 Follow these instructions to run the analysis on your local machine.
 
@@ -100,13 +111,17 @@ In the browser tab that opens, click on **`Hierarchical Clustering.ipynb`**. You
 
 -----
 
-## 🖼️ Screenshot
+## Screenshot
 
+### Step 1
 ![General interface](img1.png)
+### Step 2
 ![Filling in the details](img2.png)
+### Step 3
 ![Final predicted result](img3.png)
+
 -----
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is an educational demonstration of Hierarchical Clustering. The customer segments identified are based on the provided dataset and the specific parameters chosen for the analysis.
